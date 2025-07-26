@@ -1,9 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
+// ONLY this default export should exist
 export default defineConfig({
   plugins: [react()],
-  base: '/pokemon-cards/', // 🧠 Yeh line add karo
-})
-
+  base: '/Pokemon-Card/', // Must match your repo name exactly
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: './index.html'
+    }
+  }
+});
