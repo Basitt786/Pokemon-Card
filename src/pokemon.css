@@ -1,0 +1,171 @@
+/* Container */
+body {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
+  min-height: 100vh;
+}
+
+/* Header */
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #3b4cca;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Input */
+.inputtower {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.inputtower input {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  width: 300px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.inputtower input:focus {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Pokemon Cards Grid */
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Card */
+.popsigal {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: fadeInUp 0.8s ease forwards;
+  position: relative;
+}
+
+.popsigal:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+.card {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  animation: popIn 0.6s ease-in-out;
+}
+
+/* Name */
+.purify {
+  font-size: 1.5rem;
+  color: #ff1b68;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+/* Type */
+.butterfly p {
+  background: #e0e7ff;
+  color: #3b4cca;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Stats */
+.purple {
+  margin-top: 1rem;
+}
+
+.product {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  color: #444;
+}
+
+.product span {
+  font-weight: bold;
+  color: #3b4cca;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.8s ease;
+}
+
+.stats-row p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+.stats-row strong {
+  color: #3b4cca;
+  margin-right: 4px;
+}
